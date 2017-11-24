@@ -1,0 +1,160 @@
+/* Butterfly Animation
+Inspired by https://codepen.io/htgmanics/pen/nJwdl */
+@keyframes left-wing-flap {
+    0% {
+	-webkit-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 40deg);
+	-moz-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 40deg);
+	-ms-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 40deg);
+	-o-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 40deg);
+	transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 40deg);
+    }
+    50% {
+	-webkit-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -50deg);
+	-moz-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -50deg);
+	-ms-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -50deg);
+	-o-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -50deg);
+	transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, -50deg);
+    }
+    100% {
+	-webkit-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 40deg);
+	-moz-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 40deg);
+	-ms-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 40deg);
+	-o-transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 40deg);
+	transform: translate3d(0, 0, 0) scaleX(1) rotate3d(0, 1, 0, 40deg);
+    }
+}
+@keyframes right-wing-flap {
+    0% {
+	-webkit-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 40deg);
+	-moz-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 40deg);
+	-ms-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 40deg);
+	-o-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 40deg);
+	transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 40deg);
+    }
+    50% {
+	-webkit-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -50deg);
+	-moz-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -50deg);
+	-ms-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -50deg);
+	-o-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -50deg);
+	transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, -50deg);
+    }
+    100% {
+	-webkit-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 40deg);
+	-moz-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 40deg);
+	-ms-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 40deg);
+	-o-transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 40deg);
+	transform: translate3d(0, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 40deg);
+    }
+}
+.butterfly_container {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.butterfly_container var {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.butterfly_container var.rotate3d {
+    -webkit-transform: rotate3d(1, 0.5, 0, 50deg);
+    -moz-transform: rotate3d(1, 0.5, 0, 50deg);
+    -ms-transform: rotate3d(1, 0.5, 0, 50deg);
+    -o-transform: rotate3d(1, 0.5, 0, 50deg);
+    transform: rotate3d(1, 0.5, 0, 50deg);
+}
+.butterfly_container figure.butterfly {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.butterfly_container figure.butterfly .wing {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+    -moz-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+    -ms-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+    -o-transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+    transform: translate3d(0, 0, 0) rotate3d(1, 0.5, 0, 45deg);
+}
+.butterfly_container figure.butterfly .wing.right {
+    -webkit-transform-origin: 25px 25px;
+    -moz-transform-origin: 25px 25px;
+    -ms-transform-origin: 25px 25px;
+    -o-transform-origin: 25px 25px;
+    transform-origin: 25px 25px;
+    -webkit-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+    -moz-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+    -ms-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+    -o-transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+    transform: translate3d(0px, 0, 0) scaleX(-1) rotate3d(0, 1, 0, 45deg);
+    -webkit-animation: right-wing-flap 0.5s ease-in-out infinite;
+    -moz-animation: right-wing-flap 0.5s ease-in-out infinite;
+    -ms-animation: right-wing-flap 0.5s ease-in-out infinite;
+    -o-animation: right-wing-flap 0.5s ease-in-out infinite;
+    animation: right-wing-flap 0.5s ease-in-out infinite;
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+.butterfly_container figure.butterfly .wing.left {
+    -webkit-transform-origin: 25px 25px;
+    -moz-transform-origin: 25px 25px;
+    -ms-transform-origin: 25px 25px;
+    -o-transform-origin: 25px 25px;
+    transform-origin: 25px 25px;
+    -webkit-animation: left-wing-flap 0.5s ease-in-out infinite;
+    -moz-animation: left-wing-flap 0.5s ease-in-out infinite;
+    -ms-animation: left-wing-flap 0.5s ease-in-out infinite;
+    -o-animation: left-wing-flap 0.5s ease-in-out infinite;
+    animation: left-wing-flap 0.5s ease-in-out infinite;
+}
+.svg-defs {
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+body {
+    background:url('clouds.png') no-repeat fixed center;
+    background-size: cover;
+}
+

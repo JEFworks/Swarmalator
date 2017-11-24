@@ -4,7 +4,7 @@ This is a non-HTML5-canvas version of [The Swarmalator by Rudy Arthur](http://us
 	
 ![](swarm.gif)
 
-** [Try it out online ☞ The Butterfly Swarmalator](http://jef.works/Swarmalator/) **
+**[Try it out online ☞ The Butterfly Swarmalator](http://jef.works/Swarmalator/)**
 
 
 
